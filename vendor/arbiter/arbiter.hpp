@@ -1,7 +1,6 @@
 /// Arbiter amalgamated header (https://github.com/connormanning/arbiter).
 /// It is intended to be used with #include "arbiter.hpp"
-
-// Git SHA: 2d7719e4569f963874f7afbf11772eeeb9073e35
+// Git SHA: f7d78bb7b37e2e66671a642bd1076894f45c68a5
 
 // //////////////////////////////////////////////////////////////////////
 // Beginning of content of file: LICENSE
@@ -3800,7 +3799,7 @@ public:
      * @param path Path with the type-specifying prefix information stripped.
      */
     virtual std::vector<char> put(
-        std::string path, 
+        std::string path,
         const std::vector<char>& data) const = 0;
 
     /** True for remote paths, otherwise false.  If `true`, a fs::LocalHandle
@@ -5301,7 +5300,7 @@ public:
 
     /** Write data to path. */
     std::vector<char> put(
-            std::string path, 
+            std::string path,
             const std::vector<char>& data) const;
 
     /** Get data with additional HTTP-specific parameters.  Throws if
