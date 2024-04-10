@@ -1,6 +1,6 @@
 #!/bin/bash
 
-conda install -c conda-forge conda-build boa -y
+conda install -c conda-forge conda-build boa compilers -y
 pwd
 ls
 git clone https://github.com/hobu/pdal-feedstock.git
