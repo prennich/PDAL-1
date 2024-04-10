@@ -3,9 +3,11 @@
 conda install -c conda-forge conda-build -y
 pwd
 ls
-git clone https://github.com/conda-forge/pdal-feedstock.git
+git clone https://github.com/hobu/pdal-feedstock.git
+
 
 cd pdal-feedstock
+git checkout main
 cat > recipe/recipe_clobber.yaml <<EOL
 source:
   path: ../../
