@@ -97,5 +97,11 @@ private:
         { return 0; }
 };
 
+class PDAL_DLL NoFilenameReader : public Reader
+{
+public:
+    using Reader::Reader;
+};
+
 } // namespace pdal
 

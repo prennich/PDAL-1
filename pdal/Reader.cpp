@@ -53,7 +53,10 @@ Stage::WhereMergeMode Reader::mergeMode() const
 void Reader::l_addArgs(ProgramArgs& args)
 {
     Stage::l_addArgs(args);
-    m_filenameArg = &args.add("filename", "Name of file to read", m_filename);
+
+    // Only add the filename argument if this isn't a NoFilenameReader
+    if (!dynamic_cast<NoFilenameReader *>(this))
+        m_filenameArg = &args.add("filename", "Name of file to read", m_filename);
     m_countArg = &args.add("count", "Maximum number of points read", m_count,
         (std::numeric_limits<point_count_t>::max)());
 
