@@ -554,6 +554,12 @@ void PointView::setField(Dimension::Id dim, PointId idx, T val)
     }
 }
 
+template<>
+inline void PointView::setField(Dimension::Id dim, PointId idx, bool val)
+{
+    setField(dim, idx, static_cast<int>(val));
+}
+
 inline void PointView::appendPoint(const PointView& buffer, PointId id)
 {
     // Invalid 'id' is a programmer error.
