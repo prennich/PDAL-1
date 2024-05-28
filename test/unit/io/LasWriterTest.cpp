@@ -487,7 +487,6 @@ TEST(LasWriterTest, extra_dims)
     writer.prepare(table);
     PointViewSet viewSet = writer.execute(table);
 
-    LasTester tester;
     PointViewPtr pb = *viewSet.begin();
 
     uint16_t colors[][3] = {
@@ -1930,7 +1929,7 @@ TEST(LasWriterTest, las10_classification_from_las10_classification)
     view->setField(Id::Y, 0, 2.0);
     view->setField(Id::Z, 0, 3.0);
     view->setField(Id::Classification, 0, ClassLabel::Ground);
-    view->setField(Id::Synthetic, 0, true);
+    view->setField(Id::Synthetic, 0, 1);
     bufferReader.addView(view);
 
     Options writerOps;
@@ -1980,7 +1979,7 @@ TEST(LasWriterTest, las10_classification_from_las14_classflags)
     view->setField(Id::Y, 0, 2.0);
     view->setField(Id::Z, 0, 3.0);
     view->setField(Id::Classification, 0, ClassLabel::Ground);
-    view->setField(Id::Synthetic, 0, true);
+    view->setField(Id::Synthetic, 0, 1);
     bufferReader.addView(view);
 
     Options writerOps;
@@ -2030,7 +2029,7 @@ TEST(LasWriterTest, las14_classflags_from_las10_classification)
     view->setField(Id::Y, 0, 2.0);
     view->setField(Id::Z, 0, 3.0);
     view->setField(Id::Classification, 0, ClassLabel::Ground);
-    view->setField(Id::Synthetic, 0, true);
+    view->setField(Id::Synthetic, 0, 1);
     bufferReader.addView(view);
 
     Options writerOps;
@@ -2083,7 +2082,7 @@ TEST(LasWriterTest, las14_classflags_from_las14_classflags)
     view->setField(Id::Y, 0, 2.0);
     view->setField(Id::Z, 0, 3.0);
     view->setField(Id::Classification, 0, ClassLabel::Ground);
-    view->setField(Id::Synthetic, 0, true);
+    view->setField(Id::Synthetic, 0, 1);
     bufferReader.addView(view);
 
     Options writerOps;
